@@ -19,6 +19,7 @@ class MyTestCase(unittest.TestCase):
         for row in test_data
             self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), (['Result']))
             self.assertEqual(self.calculator.result, row['Result'])
+            print(self.calculator.result)
 
     def test_subtract_method_calculator(self):
         test_data = CsvReader('/src/Subtraction.csv').data
@@ -26,6 +27,15 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), (['Result']))
             self.assertEqual(self.calculator.result, row['Result'])
             print(self.calculator.result)
+
+    def test_divide_method_calculator(self):
+        test_data = CsvReader('/src/Division.csv').data
+        for row in test_data:
+            self.assertEqual(self.calculator.divide(row['Value 1'], row['Value 2']), (['Result']))
+            self.assertEqual(self.calculator.result, row['Result'])
+            print(self.calculator.result)
+
+
 
 if __name__ == '__main__':
     unittest.main()
