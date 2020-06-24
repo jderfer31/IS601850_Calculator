@@ -3,14 +3,14 @@ from CsvReader import CsvReader
 
 
 def addition(a, b):
-    a = float(a)
-    b = float(b)
+    a = int(a)
+    b = int(b)
     c = a + b
     return c
 
 def subtraction(a, b):
-    a = float(a)
-    b = float(b)
+    a = int(a)
+    b = int(b)
     c = b - a
     return c
 

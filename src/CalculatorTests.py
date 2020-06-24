@@ -3,6 +3,7 @@ from Calculator import Calculator
 from CsvReader import CsvReader
 
 
+
 class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
@@ -45,15 +46,15 @@ class MyTestCase(unittest.TestCase):
     def test_square_method_calculator(self):
         self.test_data = CsvReader('/src/Square.csv').data
         for row in self.test_data:
-            self.assertEqual(self.calculator.square(int(row['Value 1']))
-            self.assertEqual(self.calculator.result, row['Result'])
+            self.assertEqual(self.calculator.square(int(row['Value 1'])),
+            self.assertEqual(self.calculator.result, int(row['Result'])),
             print(self.calculator.result)
 
-    def test_math_squareroot_method_calculator(self):
+    def test_squareroot_method_calculator(self):
         self.test_data = CsvReader('/src/Square Root.csv').data
         for row in self.test_data:
             self.assertEqual(self.calculator.squareroot(int(row['Value 1']))
-            self.assertEqual(self.calculator.result, int(row['Result']))
+            self.assertEqual(self.calculator.result, int(row['Result'])),
             print(self.calculator.result)
 
 
