@@ -45,9 +45,9 @@ class Calculator:
         return self.result
 
     def square(self, a):
-        self.result = square(self, a)
+        self.result = square(a)
         return self.result
 
     def squareroot(self, a):
-        self.result = math_squareroot(self, a)
+        self.result = math_squareroot(a)
         return self.result

@@ -15,44 +15,44 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.calculator.result, 0)
 
     def test_add_method_calculator(self):
-        test_data = CsvReader('/src/Addition.csv').data
-        for row in test_data
-            self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), (['Result']))
+        self.test_data = CsvReader('/src/Addition.csv').data
+        for row in test_data:
+            self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), (row['Result']))
             self.assertEqual(self.calculator.result, row['Result'])
             print(self.calculator.result)
 
     def test_subtract_method_calculator(self):
-        test_data = CsvReader('/src/Subtraction.csv').data
+        self.test_data = CsvReader('/src/Subtraction.csv').data
         for row in test_data:
             self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), (['Result']))
             self.assertEqual(self.calculator.result, row['Result'])
             print(self.calculator.result)
 
     def test_divide_method_calculator(self):
-        test_data = CsvReader('/src/Division.csv').data
+        self.test_data = CsvReader('/src/Division.csv').data
         for row in test_data:
             self.assertEqual(self.calculator.divide(row['Value 1'], row['Value 2']), (['Result']))
             self.assertEqual(self.calculator.result, row['Result'])
             print(self.calculator.result)
 
     def test_multiply_method_calculator(self):
-        test_data = CsvReader('/src/Multiplication.csv').data
+        self.test_data = CsvReader('/src/Multiplication.csv').data
         for row in test_data:
             self.assertEqual(self.calculator.multiply(row['Value 1'], row['Value 2']), (['Result']))
             self.assertEqual(self.calculator.result, row['Result'])
             print(self.calculator.result)
 
     def test_square_method_calculator(self):
-        test_data = CsvReader('/src/Square.csv').data
+        self.test_data = CsvReader('/src/Square.csv').data
         for row in test_data:
-            self.assertEqual(self.calculator.square(row['Value 1'])
+            self.assertEqual(self.calculator.square(row['Value 1']))
             self.assertEqual(self.calculator.result, row['Result'])
             print(self.calculator.result)
 
     def test_math_squareroot_method_calculator(self):
-        test_data = CsvReader('/src/Square Root.csv').data
+        self.test_data = CsvReader('/src/Square Root.csv').data
         for row in test_data:
-            self.assertEqual(self.calculator.squareroot(row['Value 1'])
+            self.assertEqual(self.calculator.squareroot(row['Value 1']))
             self.assertEqual(self.calculator.result, row['Result'])
             print(self.calculator.result)
 
