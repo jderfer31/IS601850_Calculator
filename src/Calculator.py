@@ -3,16 +3,28 @@ from CsvReader import CsvReader
 
 
 def addition(a, b):
-    return a + b
+    a = float(a)
+    b = float(b)
+    c = a + b
+    return c
 
 def subtraction(a, b):
-    return a - b
+    a = float(a)
+    b = float(b)
+    c = b - a
+    return c
 
 def multiplication(a, b):
-    return a * b
+    a = int(a)
+    b = int(b)
+    c = a * b
+    return c
 
 def division(a, b):
-    return a / b
+    a = float(a)
+    b = float(b)
+    c = b / a
+    return c
 
 def square(a):
     b = int(a) * int(a)
