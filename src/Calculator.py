@@ -1,6 +1,6 @@
-import math
 from CsvReader import CsvReader
-
+import math
+from decimal import *
 
 def addition(a, b):
     a = int(a)
@@ -33,6 +33,9 @@ def square(a):
 def math_squareroot(a):
     b = math.sqrt(a)
     return b
+
+
+
 
 class Calculator:
     result = 0
